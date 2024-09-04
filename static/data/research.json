@@ -1,0 +1,521 @@
+[
+    {
+        "id": "r1",
+        "label": "Global History of Europe",
+        "name": "Global History of Europe",
+        "x": 3,
+        "y": 21,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p1",
+                "target_type": "people",
+                "target_label": "C. Ross",
+                "type": "works_on",
+                "label": "is lead by",
+                "target_coordinates": [
+                    42,
+                    4
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p4",
+                "target_type": "people",
+                "target_label": "S. Burghartz",
+                "type": "works_on",
+                "label": "has as a member",
+                "target_coordinates": [
+                    -48,
+                    98
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p5",
+                "target_type": "people",
+                "target_label": "M. Herren-Oesch",
+                "type": "works_on",
+                "label": "has as a member",
+                "target_coordinates": [
+                    80,
+                    -87
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r2",
+        "label": "Liquid Empire",
+        "name": "Liquid Empire",
+        "x": -80,
+        "y": 37,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/liquid-empire/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p1",
+                "target_type": "people",
+                "target_label": "C. Ross",
+                "type": "works_on",
+                "label": "is lead by",
+                "target_coordinates": [
+                    42,
+                    4
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r3",
+        "label": "Commodities of Empire",
+        "name": "Commodities of Empire",
+        "x": -76,
+        "y": -18,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/commodities-of-empire/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p1",
+                "target_type": "people",
+                "target_label": "C. Ross",
+                "type": "works_on",
+                "label": "is lead by",
+                "target_coordinates": [
+                    42,
+                    4
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r4",
+        "label": "Basel's Global Paradise: Research in Virtual Reality and Global History",
+        "name": "Basel's Global Paradise",
+        "x": 41,
+        "y": -27,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/basels-global-paradise/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p4",
+                "target_type": "people",
+                "target_label": "S. Burghartz",
+                "type": "worked_on",
+                "label": "was lead by",
+                "target_coordinates": [
+                    -48,
+                    98
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p5",
+                "target_type": "people",
+                "target_label": "M. Herren-Oesch",
+                "type": "worked_on",
+                "label": "was lead by",
+                "target_coordinates": [
+                    80,
+                    -87
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p8",
+                "target_type": "people",
+                "target_label": "C. Knab",
+                "type": "worked_on",
+                "label": "was being worked on by",
+                "target_coordinates": [
+                    78,
+                    26
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p17",
+                "target_type": "people",
+                "target_label": "S. Marti",
+                "type": "worked_on",
+                "label": "was being worked on by",
+                "target_coordinates": [
+                    81,
+                    -4
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p16",
+                "target_type": "people",
+                "target_label": "L. von Felten-Kury",
+                "type": "worked_on",
+                "label": "was being worked on by",
+                "target_coordinates": [
+                    -55,
+                    -25
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r5",
+        "label": "Impact: Teaching, Research, Connecting Scholars",
+        "name": "Impact",
+        "x": 0,
+        "y": -75,
+        "pageUrl": "https://europa.unibas.ch/en/research/impact/",
+        "text": "",
+        "connections": []
+    },
+    {
+        "id": "r6",
+        "label": "European Law",
+        "name": "European Law",
+        "x": -62,
+        "y": -7,
+        "pageUrl": "https://europa.unibas.ch/en/research/european-law/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p2",
+                "target_type": "people",
+                "target_label": "C. Tobler",
+                "type": "principal_investigator",
+                "label": "is lead by",
+                "target_coordinates": [
+                    81,
+                    63
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r7",
+        "label": "Foreign Trade and European Integration",
+        "name": "Foreign Trade and European Integration",
+        "x": -14,
+        "y": 73,
+        "pageUrl": "https://europa.unibas.ch/en/research/foreign-trade-and-europ-integration/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p6",
+                "target_type": "people",
+                "target_label": "R. Weder",
+                "type": "principal_investigator",
+                "label": "is lead by",
+                "target_coordinates": [
+                    -79,
+                    -117
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r8",
+        "label": "Infrastructuring Nature: The Malacca Strait and the Making of an Environmental Transit Corridor, c. 1870-1910",
+        "name": "Infrastructuring Nature",
+        "x": 58,
+        "y": -100,
+        "pageUrl": "https://www.infoclio.ch/de/infrastructuring-nature-malacca-strait-and-making-environmental-transit-corridor-c-1870-1910",
+        "text": "",
+        "connections": [
+            {
+                "target": "p16",
+                "target_type": "people",
+                "target_label": "L. von Felten-Kury",
+                "type": "works_on",
+                "label": "is the dissertation project of",
+                "target_coordinates": [
+                    -55,
+                    -25
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r9",
+        "label": "Global Dimensions of the 1994 Genocide against Tutsi in Rwanda",
+        "name": "1994 Genocide",
+        "x": 2,
+        "y": -127,
+        "pageUrl": "https://europa.unibas.ch/de/aktuelles/nachrichten/nachrichtendetails/thanushiyah-korn-presents-her-phd-research-on-rwanda-at-disskurs-2024/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p20",
+                "target_type": "people",
+                "target_label": "T. Korn",
+                "type": "works_on",
+                "label": "is the dissertation project of",
+                "target_coordinates": [
+                    75,
+                    -11
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r10",
+        "label": "Reversing The Gaze: Towards Post-Comparative Area Studies",
+        "name": "Reversing the Gaze",
+        "x": 18,
+        "y": 128,
+        "pageUrl": "https://europa.unibas.ch/en/research/european-global-knowledge-production/reversing-the-gaze/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p3",
+                "target_type": "people",
+                "target_label": "R. Weber",
+                "type": "works_on",
+                "label": "is lead by",
+                "target_coordinates": [
+                    14,
+                    69
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p15",
+                "target_type": "people",
+                "target_label": "L. Posholi",
+                "type": "works_on",
+                "label": "is being worked on by",
+                "target_coordinates": [
+                    -8,
+                    87
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r11",
+        "label": "European Studies in a Global Perspective",
+        "name": "European Studies in a Global Perspective",
+        "x": -11,
+        "y": 124,
+        "pageUrl": "https://europa.unibas.ch/en/research/european-global-knowledge-production/european-studies-in-a-global-perspective/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p24",
+                "target_type": "people",
+                "target_label": "N. Wenger",
+                "type": "works_on",
+                "label": "is being worked on by",
+                "target_coordinates": [
+                    72,
+                    -48
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p3",
+                "target_type": "people",
+                "target_label": "R. Weber",
+                "type": "works_on",
+                "label": "is being lead by",
+                "target_coordinates": [
+                    14,
+                    69
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p14",
+                "target_type": "people",
+                "target_label": "S. T\u00e2rlea",
+                "type": "works_on",
+                "label": "is being worked on by",
+                "target_coordinates": [
+                    69,
+                    14
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p25",
+                "target_type": "people",
+                "target_label": "I.-E. Soualhi",
+                "type": "works_on",
+                "label": "is being worked on by",
+                "target_coordinates": [
+                    -57,
+                    32
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r12",
+        "label": "The Exterior of Philosophy: On the Practice of New Confucianism",
+        "name": "The Exterior of Philosophy",
+        "x": 80,
+        "y": -37,
+        "pageUrl": "https://europa.unibas.ch/de/forschung/european-global-knowledge-production/the-exterior-of-philosophy/#:~:text=The%20Exterior%20of%20Philosophy%3A%20On%20the%20Practice%20of%20New%20Confucianism&text=This%20research%20project%20looks%20at,of%20local%20and%20global%20challenges.",
+        "text": "",
+        "connections": [
+            {
+                "target": "p26",
+                "target_type": "people",
+                "target_label": "Ph. Major",
+                "type": "worked_on",
+                "label": "is being worked on by",
+                "target_coordinates": [
+                    51,
+                    -149
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r13",
+        "label": "Politics and Philosophy in European Global Knowledge Production",
+        "name": "Pol. and Phil. in Europ. Global Knowledge Prod.",
+        "x": -31,
+        "y": 147,
+        "pageUrl": "https://europa.unibas.ch/en/research/european-global-knowledge-production/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p3",
+                "target_type": "people",
+                "target_label": "R. Weber",
+                "type": "works_on",
+                "label": "is lead by",
+                "target_coordinates": [
+                    14,
+                    69
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r14",
+        "label": "The Divisive Power of Citizenship",
+        "name": "DPC",
+        "x": -47,
+        "y": -149,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/the-divisive-power-of-citizenship/",
+        "text": "This project, \"The Divisive Power of Citizenship\", seeks to relate and connect these recent processes effectively with historical precedents to create an expanded understanding of citizenship which can both reveal new insights about the past as well as the contemporary situation.",
+        "connections": [
+            {
+                "target": "p5",
+                "target_type": "people",
+                "target_label": "M. Herren-Oesch",
+                "type": "worked_on",
+                "label": "was lead by",
+                "target_coordinates": [
+                    80,
+                    -87
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p17",
+                "target_type": "people",
+                "target_label": "S. Marti",
+                "type": "worked_on",
+                "label": "was being worked on by",
+                "target_coordinates": [
+                    81,
+                    -4
+                ],
+                "is_secondary": true
+            },
+            {
+                "target": "p19",
+                "target_type": "people",
+                "target_label": "L. Kasper",
+                "type": "worked_on",
+                "label": "was being worked on by",
+                "target_coordinates": [
+                    37,
+                    137
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r15",
+        "label": "Shared Colonialism",
+        "name": "Shared Colonialism",
+        "x": -14,
+        "y": -10,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/shared-colonialism/",
+        "text": "This project dealt with the international administration of the city of Tanger (Morocco) from 1840 to 1956. It looked at the history of the internationalization of Tanger from a global historical perspective in order to make complex processes of globalization visible on a local level.",
+        "connections": [
+            {
+                "target": "p5",
+                "target_type": "people",
+                "target_label": "M. Herren-Oesch",
+                "type": "worked_on",
+                "label": "was lead by",
+                "target_coordinates": [
+                    80,
+                    -87
+                ],
+                "is_secondary": true
+            }
+        ]
+    },
+    {
+        "id": "r16",
+        "label": "Global Information at a Glance: Power, Law, and Commerce through the Lens of Asia Directories",
+        "name": "Global Information at a Glance",
+        "x": 49,
+        "y": 72,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/global-information-at-a-glance/",
+        "text": "Analyzing the fabric of information displayed in the Directory series during the nineteenth and first half of the twentieth century enables us to understand the development of a global information society. We show how information is used as a raw material which contributed to develop forms of global expertise.",
+        "connections": []
+    },
+    {
+        "id": "r17",
+        "label": "Global Politics on Screen",
+        "name": "Global Politics on Screen",
+        "x": -45,
+        "y": -76,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/global-politics-on-screen/",
+        "text": "This research project presents an introduction to the efforts of the League of Nations to investigate in the Sino-Japanese conflict about Manchuria. Our starting point is a Japanese silent propaganda film from the early 1930s about the work of the so-called Lytton Commission of the League of Nations, which visualizes events of international politics for a global public.",
+        "connections": []
+    },
+    {
+        "id": "r18",
+        "label": "A Global History of Swiss Diplomacy, 1848-1975",
+        "name": "A Global History of Swiss Diplomacy",
+        "x": 62,
+        "y": -158,
+        "pageUrl": "https://europa.unibas.ch/en/research/global-history-of-europe/a-global-history-of-swiss-diplomacy/",
+        "text": "",
+        "connections": [
+            {
+                "target": "p5",
+                "target_type": "people",
+                "target_label": "M. Herren-Oesch",
+                "type": "worked_on",
+                "label": "was lead by",
+                "target_coordinates": [
+                    80,
+                    -87
+                ],
+                "is_secondary": true
+            }
+        ]
+    }
+]

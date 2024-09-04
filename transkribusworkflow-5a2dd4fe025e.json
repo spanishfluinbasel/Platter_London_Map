@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "transkribusworkflow",
+  "private_key_id": "5a2dd4fe025eeb44ea7f38ee83a6bd6170d85107",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCVPB4Zh/uwwDdM\n6ab+Pdi4ylKLuFtkVNi1ErclZxK2S3yFEzhBSc4stIe5VFrHA+cv9YNVv0vn92Ev\nQaU4Nwy19gOZRzQBl48BQIqgHmZxlpde9xLlv3HKXBCOCpvpZpw3Tt4F0gP9TDD7\npuOIKUlnDwdfPZ+qALfrXIyqxJISs7HBxj0gMDn9l0Lk4GQYpUrtmsOasXI0kN97\nD8Pw2sQMO4ONaLJVkasG03irFCR9R3TYrEwho6JEtcR54gczEe5WpeR6Zo2CN1F4\nAo3oRUnoTykE1RITsx90EIBoMUxitsy9OaImLNOxigu6frdZfAas2r0ECVUIJQ7F\n4zZ++C9LAgMBAAECggEAAlwZsvHaOLPGMnwMjQwH6StUPdHzxAGuQY+JTNkB5aPX\nVR72LnYbzmVczHRS6r9OWkBJsnZP0KjlPpzAbF1wFB21QqjqrIHFTzhCWOc4juBA\nn+d/qX/Ek8LiUiF4NxGAmkR8sN8R+0d6pZtAd5ueuQRdHsdRk7WAmWl0iF8kwV3t\nQyWbWkEK9EwmnICfztpkBV4gCzp66tG+QrZNiataAB8rjISOM56gG9jkEikuQG11\nyraaDLuojcpUHwxZGnFP4xXpjLr/UX6mqlQAKV069w0X6i3eZRSgC5TweqvNGje9\nIEyO4KS5PQT+udYad2o0mh4p7zVJ3xEquIXIiMQg1QKBgQDGGUwuNoqmkhgAULOm\nuiJOiG1l95pw2kgBtlC7ZCXRR4JDUBrq8lBMs25fjLMPujRoYDWvK/BgEmxfS13H\nUDiRAVcFWNZl2rHobqpkBOxNKzdl+/vvVKcpv2Sd37059iqiGZWFuF9/33H9dWYP\nM1ACVRmotunznXkX9/6CGuIylQKBgQDA2pUoaoZfocTY1e0Tqc67iOMBjgMVSdE7\nueLERtLrvA9fsJF2BXNJaKodVIQbdF3rZkIzsMatt7z0SyFselNkM4nz/qujONuo\nxq29ATdClFFnK3x67L4prgFeK5lBxogHv7U2JQakvOo+oZP/4/+x852XriBsUmEE\ncW2SSclCXwKBgDiOynA7RDSwa0fTwqbsZ5USYGGHYsGroHlUqxIFUsLAbtF3EmhX\nzFNJu05uZkUsPYA7T7h2jAdx2x0N8HVSUwQbZNPy/CtSWA7rYZxyx2B04Tkty00W\nVy+VJE3qriTZQmzLbyQhcqqYifv6Q6w9Uy+HSm8f4gWaxRLxy+krcb9NAoGAft4M\nq6bQOQ8peN/ac0oNBs+5TmeG3bVO4LSbWjWhQZTYpEF6n6JcQhmJd3wG4CzAMEB4\nIpsTSGqL8kWOeldKjqtdAFczwE+CKVhyKNko6jK6Dl3MKO2e97pRigqyalPZXwed\nhT38Tdk9W/BddUQfDIjPzl2tVLUov4yC4W6K6I8CgYB5S1KiTFty9St4NWzyDU9U\ndbn3n6wKlVdyOwiv3+j9xrCEEuuCKTbCGiuATXoh0DeuIpcs/b2ek1oVV7OgXh+e\nvjHvDWNz4zqoNhGSYUaHKdKEv+OIKxwaIOP8rbzkFymBfpWIpk0e8ToQmh48yB2y\nhkFEj/DG35J8WhnZtNgCww==\n-----END PRIVATE KEY-----\n",
+  "client_email": "eib-540@transkribusworkflow.iam.gserviceaccount.com",
+  "client_id": "105659942353353828365",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eib-540%40transkribusworkflow.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

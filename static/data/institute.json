@@ -1,0 +1,29 @@
+[
+    {
+        "id": "i1",
+        "label": "About the Sandgrube",
+        "name": "About the Sandgrube",
+        "x": -74,
+        "y": 112,
+        "pageUrl": "https://europa.unibas.ch/en/about-us/about-our-domicile/",
+        "connections": []
+    },
+    {
+        "id": "i2",
+        "label": "About the Institute",
+        "name": "About the Institute",
+        "x": 60,
+        "y": -26,
+        "pageUrl": "https://europa.unibas.ch/en/about-us/",
+        "connections": []
+    },
+    {
+        "id": "i3",
+        "label": "Annual Reports",
+        "name": "Annual Reports",
+        "x": -16,
+        "y": -132,
+        "pageUrl": "https://europa.unibas.ch/en/about-us/annual-reports/",
+        "connections": []
+    }
+]

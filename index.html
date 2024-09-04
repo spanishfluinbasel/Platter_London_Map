@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaflet Map with Custom Tiles</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="static/css/map.css" />
+
+        <script src="static/js/markedMap.js"></script>
+        <!-- Leaflet.markercluster CSS and JS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    </head>
+    <body>
+        <!-- Map container -->
+        <div id="map"></div>
+
+        <!-- Information panel -->
+        <div id="infoPanel">
+            <h2>EIB Research Landscape</h2>
+            <div id="infoWrapper">
+                <div id="infoContent">
+                    <p>Select a marker to see more information here.</p>
+                </div>
+            </div>
+            <div class="preview-box">
+                <div class="preview-content" id="previewContent"></div>
+                <div class="preview-overlay" id="previewOverlay">
+                    <span>Visit Page</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-banner">
+            <!-- Left group of icons -->
+            <div class="icon-group" id="left-icons">
+                <div class="banner-image active" data-toggle="people">
+                    <object type="image/svg+xml" data="static/icons/people.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="research">
+                    <object type="image/svg+xml" data="static/icons/research.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="institute">
+                    <object type="image/svg+xml" data="static/icons/institute.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="studies">
+                    <object type="image/svg+xml" data="static/icons/studies.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="digital">
+                    <object type="image/svg+xml" data="static/icons/digital.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="news">
+                    <object type="image/svg+xml" data="static/icons/news.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Central area for description -->
+            <div class="banner-description" id="icon-description">
+                Hover over an icon to see its description
+            </div>
+
+            <!-- Right group of icons -->
+            <div class="icon-group" id="right-icons">
+                <div class="banner-image active" data-toggle="works_on">
+                    <object type="image/svg+xml" data="static/icons/lines.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="worked_on">
+                    <object type="image/svg+xml" data="static/icons/lines.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="doctoral_advisor">
+                    <object type="image/svg+xml" data="static/icons/lines.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="principal_investigator">
+                    <object type="image/svg+xml" data="static/icons/lines.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="teaches">
+                    <object type="image/svg+xml" data="static/icons/lines.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="studied">
+                    <object type="image/svg+xml" data="static/icons/lines.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+                <div class="banner-image active" data-toggle="do_study">
+                    <object type="image/svg+xml" data="static/icons/lines.svg" class="svg-icon"></object>
+                    <div class="click-overlay"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Initialize the map with Web Mercator projection (default CRS)
+            const DEBUG = true;
+            const map = L.map('map').setView([0, 0], 2); // Center the map
+            const mercatorBounds = [[-85.05112878, -180], [85.05112878, 180]];
+
+            // Add a tile layer to the map with TMS option enabled
+            L.tileLayer('http://localhost:8000/{z}/{x}/{y}.png', {
+                maxZoom: 7,   // Based on your tile generation levels
+                minZoom: 0,
+                tileSize: 256,
+                noWrap: true,     // Prevents the tiles from repeating outside the defined bounds
+                bounds: mercatorBounds // Set bounds to limit panning
+            }).addTo(map);
+
+            map.setMaxBounds(mercatorBounds);
+
+            loadAllMarkers(map);
+
+            $(document).ready(function() {
+                // Delegate event handling to a common parent element
+                $('.bottom-banner').on('click', '.click-overlay', function() {
+                    const type = $(this).parent().data('toggle').toUpperCase(); // Ensure the type is uppercase
+                    const layer = (TYPES[type] ? TYPES[type].layer : CONNECTION_TYPES[type]?.layer); // Use optional chaining
+
+                    if (layer) {
+                        toggleLayer(map, layer, this.parentElement);
+                    }
+                });
+
+                // Apply color to SVG icons in the bottom banner
+                $('.banner-image object').each(function() {
+                    const $object = $(this);
+                    $object.on('load', function() {
+                        const type = $object.parent().data('toggle').toUpperCase();
+                        let color = TYPES[type]?.color;
+
+                        if (color) {
+                            const svgDoc = this.contentDocument;
+                            if (svgDoc) {
+                                const paths = svgDoc.querySelectorAll('path');
+                                paths.forEach(path => {
+                                    path.style.fill = color; // Apply the color to the SVG path
+                                });
+                            }
+                        }
+
+                        color = CONNECTION_TYPES[type]?.color;
+                        if (color) {
+                            const svgDoc = this.contentDocument;
+                            if (svgDoc) {
+                                const paths = svgDoc.querySelectorAll('path');
+                                paths.forEach(path => {
+                                    path.style.fill = color; // Apply the color to the SVG path
+                                });
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Hover effect for description in the bottom banner
+            document.querySelectorAll('.banner-image').forEach(img => {
+                img.addEventListener('mouseenter', function() {
+                    const type = this.getAttribute('data-toggle').toUpperCase();
+                    const description = TYPES[type]?.description || CONNECTION_TYPES[type]?.description;
+                    document.getElementById('icon-description').textContent = description || "Hover over an icon to see its description";
+                });
+
+                img.addEventListener('mouseleave', function() {
+                    document.getElementById('icon-description').textContent = "Hover over an icon to see its description";
+                });
+            });
+
+            if(DEBUG){
+                // Add an event listener to show coordinates on map click
+                map.on('click', function(e) {
+                    var lat = e.latlng.lat;
+                    var lng = e.latlng.lng;
+                    L.popup()
+                        .setLatLng(e.latlng)
+                        .setContent("Coordinates: " + lat + ", " + lng)
+                        .openOn(map);
+                });
+            }
+        </script>
+    </body>
+</html>

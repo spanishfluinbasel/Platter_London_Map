@@ -1,0 +1,22 @@
+[
+    {
+        "id": "n1",
+        "label": "Event Calendar",
+        "name": "Event Calendar",
+        "x": -75,
+        "y": -129,
+        "text": "",
+        "pageUrl": "https://europa.unibas.ch/en/news/event-calendar/",
+        "connections": []
+    },
+    {
+        "id": "n2",
+        "label": "News",
+        "name": "News",
+        "x": -23,
+        "y": -47,
+        "text": "",
+        "pageUrl": "https://europa.unibas.ch/en/news/news/",
+        "connections": []
+    }
+]

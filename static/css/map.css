@@ -1,0 +1,383 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #2d373c;
+}
+
+#map {
+    width: 70%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background: #2d373c;
+}
+
+.custom-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-wrapper svg {
+    width: 70%;
+    height: 70%;
+}
+
+/* Info panel styles */
+#infoPanel {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#infoPanel h2 {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #2d373c;
+}
+
+#infoPanel p {
+    color: #2d373c;
+}
+
+/* Content area */
+#infoWrapper {
+    flex-grow: 1;              /* Takes the available space */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;         /* Allows scrolling */
+    margin-bottom: 10px;      /* Space between content and preview box */
+    /* Firefox */
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-color: #d20537 #2d373c; /* Scrollbar color and background */
+}
+
+/* Chrome, Edge, Safari */
+#infoWrapper::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+#infoWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+#infoWrapper::-webkit-scrollbar-thumb {
+    background-color: #2d373c; /* Color of the draggable scrollbar */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #f1f1f1; /* Padding around the thumb */
+}
+
+#infoWrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #2d373c; /* Darker color when hovered */
+}
+
+/* Styles for the preview box */
+.preview-box {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    min-height: 200px; /* Fixed height for the scrolling effect */
+    height: 200px; /* Fixed height for the scrolling effect */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    margin-top: auto; /* Pushes to the bottom of the container */
+    margin-bottom: 90px;
+    cursor: pointer; /* Make it look clickable */
+}
+
+/* Styles for the overlay */
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s; /* Smooth fade-in */
+}
+
+.preview-box:hover .preview-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.preview-overlay span {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Content that will be animated */
+.preview-content {
+    width: 100%;
+    height: 100%; /* Ensure it takes the full height of its container */
+    background-size: contain; /* Scale down the image to fit the width of the container */
+    background-repeat: no-repeat;
+    background-position: top center; /* Center the image horizontally */
+    animation: scroll-animation 20s linear infinite; /* Scroll up and down */
+    animation-delay: 2s;
+}
+
+/* Animation to simulate scrolling */
+@keyframes scroll-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25%); /* Only scroll to the middle of the image */
+    }
+    100% {
+        transform: translateY(0); /* Scroll back to the top */
+    }
+}
+
+/* Connection list styles */
+.connections-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+.connection-item {
+    margin-bottom: 20px; /* Space between each connection item */
+}
+
+.connection-text {
+    display: block; /* Make sure the text spans the full width */
+    color: #2d373c; /* Adjust text color */
+    font-size: 0.7rem; /* Adjust font size */
+    margin-bottom: 5px; /* Space between text and icons */
+    text-align: center;
+}
+
+.connection-icons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.connection-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    margin: 0 5px; /* Space between icon and line */
+}
+
+.connection-line {
+    flex-grow: 1; /* Allows the line to take up the remaining space */
+    height: 2px; /* Thickness of the line */
+    background-color: black; /* Default line color, overridden by inline styles */
+}
+
+.bottom-banner {
+    width: 100%;
+    height: 80px;
+    background: #2d373c;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Distribute space between icon groups */
+    padding: 0 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding is accounted for in width */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.icon-group {
+    display: inline-flex;
+    gap: 15px;
+}
+
+#left-icons {
+    justify-content: flex-start;
+}
+
+#right-icons {
+    justify-content: flex-end;
+    margin-left: auto; /* Ensures this group aligns to the far right */
+}
+
+.banner-description {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.banner-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.banner-image.active {
+    border-bottom: 2px solid #ff6347;
+}
+
+.svg-icon {
+    width: 80%;
+    height: 80%;
+    pointer-events: none; /* Ensure clicks are only on the overlay */
+}
+
+.click-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    z-index: 1001;
+}
+
+.people-sidebar {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px; /* Space between image and text */
+}
+
+.people-image img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.people-info {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.people-info h3 {
+    margin: 0 0 5px 0; /* Name at the top */
+    color: #2d373c; /* Same color as other headings for consistency */
+}
+
+.people-info p {
+    margin: 5px 0;
+    font-size: 0.9rem; /* Adjust font size */
+    color: #2d373c;
+}
+
+.people-info p i {
+    color: #555; /* Italic text in a slightly different color for distinction */
+}
+
+.select-marker {
+    cursor: pointer;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.6em; /* Add padding to make it look like a badge */
+    font-size: 0.75rem; /* Smaller font size */
+    font-weight: 700; /* Make the text bold */
+    line-height: 1;
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Background color, like Bootstrap's primary */
+    border-radius: 0.375rem; /* Rounded corners */
+    vertical-align: middle;
+}
+
+.unibas-link {
+    color: #d20537;
+    text-decoration: none; /* Remove underline */
+}
+
+.popup-content {
+    display: flex;
+    align-items: center; /* Vertically aligns icon and text */
+}
+
+.popup-icon {
+    margin-right: 10px; /* Space between the icon and the text */
+}
+
+.popup-icon img {
+    width: 25px; /* Set the width of the icon */
+    height: 25px; /* Set the height of the icon */
+    object-fit: contain; /* Keep the aspect ratio of the image */
+}
+
+.popup-text {
+    font-size: 1rem; /* Adjust text size as needed */
+    color: #2d373c; /* Set text color */
+}
+
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    #map {
+        width: 100%;
+        height: 70%; /* Map takes up most of the screen height */
+        float: none;
+    }
+
+    #infoPanel {
+        width: 100%;
+        height: 30%; /* Info panel takes up the remaining height */
+        float: none;
+        position: relative;
+        overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+
+    /* Optional: Adjust the height of the preview box to fit better on mobile */
+    .preview-box {
+        max-width: 100%; /* Ensure it takes up the full width of the container */
+        height: 150px; /* Reduced height for smaller screens */
+    }
+
+    #infoPanel h2 {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    #icon-description {
+        visibility: hidden; /* Hide the icon description on mobile */
+    }
+}
