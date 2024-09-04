@@ -42,8 +42,9 @@ root/
 │   │   └── icons/             # Marker and connection icons
 │   ├── js/
 │   │   └── markedMap.js       # Core JavaScript for the map and interactions
-│   └── data/
-│       └── *.json             # JSON files generated from Google Sheets
+│   ├── data/
+│   │   └── *.json             # JSON files generated from Google Sheets
+│   └── tiles/                 # Tiled map image 
 ├── templates/
 │   └── index.html             # Main HTML template
 ├── transkribusworkflow-5a2dd4fe025e.json  # Google Sheets API credentials
