@@ -53,7 +53,7 @@ def download_and_save_json():
 
     for worksheet in sheet.worksheets():
         sheet_name = worksheet.title
-        if sheet_name == '_connections':
+        if sheet_name.startswith('_'):
             continue
 
         data = worksheet.get_all_records()
