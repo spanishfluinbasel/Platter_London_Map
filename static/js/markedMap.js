@@ -6,73 +6,25 @@ const markersById = {};
 
 //
 const TYPES = {
-    PEOPLE: {
-        icon: 'static/icons/people.svg',
+    ANIMALS: {
+        icon: 'static/icons/animals.svg',
         color: '#7994c8',
-        description: 'Show or hide the people working at the institute.'
+        description: 'Show or hide animal markers.'
     },
-    INSTITUTE: {
-        icon: 'static/icons/institute.svg',
+    LOCATIONS: {
+        icon: 'static/icons/locations.svg',
         color: '#81ae71',
-        description: 'Show or hide information about the institute and building.'
+        description: 'Show or hide location markers.'
     },
-    RESEARCH: {
-        icon: 'static/icons/research.svg',
+    PERSONS: {
+        icon: 'static/icons/persons.svg',
         color: '#bab17b',
-        description: 'Show or hide research areas, projects and research groups.'
+        description: 'Show or hide person markers.'
     },
-    DIGITAL: {
-        icon: 'static/icons/digital.svg',
+    THEATRE: {
+        icon: 'static/icons/theatre.svg',
         color: '#d68787',
-        description: 'Show or hide digital projects and initiatives.'
-    },
-    STUDIES: {
-        icon: 'static/icons/studies.svg',
-        color: '#cc84f4',
-        description: 'Show or hide study programs and courses.'
-    },
-    NEWS: {
-        icon: 'static/icons/news.svg',
-        color: '#616d8f',
-        description: 'Show or hide news and events.'
-    }
-};
-
-const CONNECTION_TYPES = {
-    WORKS_ON: {
-        color: 'blue',
-        description: 'Show or hide work connections.',
-        lineDescription: 'currently works on'
-    },
-    WORKED_ON: {
-        color: 'green',
-        description: 'Show or hide past work connections.',
-        lineDescription: 'worked on'
-    },
-    DOCTORAL_ADVISOR: {
-        color: 'red',
-        description: 'Show or hide doctoral advisor connections.',
-        lineDescription: 'is Doctoral advisor of'
-    },
-    PRINCIPAL_INVESTIGATOR: {
-        color: 'purple',
-        description: 'Show or hide principal investigator connections.',
-        lineDescription: 'is Principal Investigator of'
-    },
-    TEACHES: {
-        color: 'orange',
-        description: 'Show or hide teaching connections.',
-        lineDescription: 'teaches'
-    },
-    STUDIED: {
-        color: 'brown',
-        description: 'Show or hide past study connections.',
-        lineDescription: 'studied'
-    },
-    DO_STUDY: {
-        color: 'black',
-        description: 'Show or hide study connections.',
-        lineDescription: 'studies'
+        description: 'Show or hide theatre markers.'
     }
 };
 
@@ -130,29 +82,26 @@ function toggleLayer(map, layer, element) {
     }
 }
 
-/**
- * Function to create a popup message based on the icon type.
- * @param {string} iconType - The type of the icon.
- * @param {object} data - Additional data for the popup content.
- * @returns {string} The HTML content for the popup.
- */
-function createPopupContent(iconType, data) {
-    const iconUrl = TYPES[iconType.toUpperCase()].icon;
+// Function to open the specified tab
+function openTab(evt, tabName) {
+  let i, tabcontent, tablinks;
 
-    let content = `
-        <div class="popup-content">
-            
-            <div class="popup-icon">
-                <img src="${iconUrl}" alt="${iconType} icon">
-            </div>
-            <div class="popup-text">
-                <p>${data.Label}</p>
-            </div>
-        </div>
-    `;
-    return content;
+  // Hide all tab content
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the 'active' class from all tab buttons
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab and add 'active' class to the clicked button
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
-
 
 /**
  * Function to update the sidebar content based on the marker data.
@@ -168,91 +117,42 @@ function updateSidebarContent(data, type) {
     type = type.toUpperCase();
 
     switch (type) {
-        case 'PEOPLE':
-            content = `
-                <div class="people-sidebar">
-                    <div class="people-image">
-                        <img src="static/images/portraits/${data.id}.jpg" alt="${data.label} portrait">
-                    </div>
-                    <div class="people-info">
-                        <h3>${data.label}</h3>
-                        <p><strong>Role:</strong> ${data.role}</p>
-                        <p><i>${data.text}</i></p>
-                    </div>
-                </div>
-            `;
-            break;
-        // Add more cases for other types if needed
         default:
             content = `
-                <h3>${data.label}</h3>
-                <p><i>${data.text}</i></p>
-                <p><a href="${data.pageUrl}" target="_blank" class="unibas-link">> Visit Page</a></p>
+                <h3>${data.name}</h3>
+                <div style="margin-bottom: 25px;">
+                    <i>${data.text}</i>
+                </div>
+                <!-- Tab buttons -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'src_image')">Sorce Image</button>
+                    <button class="tablinks" onclick="openTab(event, 'txt_orig')">Original Text</button>
+                    <button class="tablinks" onclick="openTab(event, 'txt_en')">English</button>
+                </div>
+                
+                  <!-- Tab content -->
+                <div id="src_image" class="tabcontent">
+                    <p>
+                        <img src="https://www.e-manuscripta.ch/i3f/v21/${data.page_img}/full/pct:10/0/default.jpg"
+                        alt="Source Image">
+                    </p>
+                    <p><a href="https://www.e-manuscripta.ch/bau/platter/content/zoom/${data.page_img}" target="_blank" class="unibas-link">> View full image</a></p>
+                </div>
+                
+                <div id="txt_orig" class="tabcontent">
+                    <p>${data.src_text_orig}</p>
+                </div>
+                
+                <div id="txt_en" class="tabcontent">
+                    <p>${data.src_text_translation}</p>
+                </div>
+                
+               <div>
+                 <!-- Placeholder for static bottom content -->
+               </div>
             `;
             break;
     }
-
-    // Add connections if present
-    if (data.connections && data.connections.length > 0) {
-        content += `<h4>Connections:</h4><ul class="connections-list">`;
-        data.connections.forEach(connection => {
-            const connectionType = CONNECTION_TYPES[connection.type.toUpperCase()]?.description || connection.type;
-            const targetLabel = connection.target_label || connection.target;
-            const connectionColor = CONNECTION_TYPES[connection.type.toUpperCase()]?.color || 'black';
-            const sourceIcon = TYPES[type]?.icon;
-            const sourceColor = TYPES[type]?.color || 'black';
-            const targetIcon = TYPES[connection.target_type.toUpperCase()]?.icon;
-            const targetColor = TYPES[connection.target_type.toUpperCase()]?.color || 'black';
-
-            content += `
-                <li class="connection-item">
-                    <span class="connection-text">
-                        <span class="badge select-marker" data-target-id="${data.id}" style="background-color: ${sourceColor}">${data.name}</span> 
-                        ${connection.label}
-                        <span class="badge select-marker" data-target-id="${connection.target}" style="background-color: ${targetColor}">${targetLabel}</span> 
-                    </span>
-                    <div class="connection-icons">
-                        <img src="${sourceIcon}" alt="${type} icon" class="connection-icon select-marker" data-target-id="${data.id}">
-                        <span class="connection-line" style="background-color: ${connectionColor};"></span>
-                        <img src="${targetIcon}" alt="${connection.target_type} icon" class="connection-icon select-marker" data-target-id="${connection.target}">
-                    </div>
-                </li>
-            `;
-        });
-        content += `</ul>`;
-    }
-
-
-    // Update the preview content with the corresponding image
-    const imagePath = `static/images/screenshots/ss_${data.id}.png`;
-    previewContent.style.backgroundImage = `url('${imagePath}')`;
-
-    // Set the link for the page
-    const pageUrl = data.pageUrl; // Make sure `data.url` contains the actual URL
-
-    // Set click event to open the page in a new tab
-    previewOverlay.onclick = function() {
-        if (pageUrl) {
-            window.open(pageUrl, '_blank');
-        }
-    };
-
-    // Set the height of preview-content based on the image
-    const img = new Image();
-    img.onload = function() {
-        previewContent.style.height = this.height + 'px';
-    };
-    img.src = imagePath;
-
-    // Dynamically set the animation delay and restart animation
-    const animationDuration = 10; // Duration of the scroll in seconds
-    const animationDelay = 2; // Delay before the animation starts in seconds
-    const scrollDistance = 50; // Percentage to scroll (50%)
-
-    // Reset animation by changing the animation property
-    previewContent.style.animation = 'none'; // Remove current animation
-    previewContent.offsetHeight; // Trigger a reflow, flushing the CSS changes
-    previewContent.style.animation = `scroll-animation ${animationDuration}s ${animationDelay}s linear infinite`;
 
     infoContent.innerHTML = content;
 
@@ -286,13 +186,10 @@ function createMarker(markerGroup, type, markerData, icon) {
     // Store the marker in the global object using its ID
     markersById[id] = marker;
 
-    // Create and bind the popup
-    const popupContent = createPopupContent(type, popupData);
-    marker.bindPopup(popupContent);
-
     // Add a click event listener to the marker
     marker.on('click', function () {
         updateSidebarContent(markerData, type);
+        document.querySelector(".tablinks").click();
     });
 }
 
@@ -301,10 +198,6 @@ async function loadAllMarkers(map) {
     // Initialize layers directly in TYPES and CONNECTION_TYPES
     Object.keys(TYPES).forEach(typeKey => {
         TYPES[typeKey].layer = L.markerClusterGroup();
-    });
-
-    Object.keys(CONNECTION_TYPES).forEach(typeKey => {
-        CONNECTION_TYPES[typeKey].layer = L.layerGroup();
     });
 
     // Load markers and connections
@@ -318,25 +211,6 @@ async function loadAllMarkers(map) {
 
             data.forEach(markerData => {
                 createMarker(layer, typeKey, markerData, iconInstance);
-
-                if (markerData.connections) {
-                    markerData.connections.forEach(connection => {
-                        // Check if the connection is secondary
-                        if (!connection.is_secondary) {  // Only process primary connections
-                            const connectionType = CONNECTION_TYPES[connection.type.toUpperCase()];
-                            if (connectionType && connectionType.layer) {
-                                const latlngs = [
-                                    [markerData.x, markerData.y],
-                                    connection.target_coordinates
-                                ];
-                                const connectionColor = connectionType.color || 'black'; // Default color
-                                L.polyline(latlngs, { color: connectionColor }).addTo(connectionType.layer);
-                            } else {
-                                console.error(`Connection type ${connection.type} not found.`);
-                            }
-                        }
-                    });
-                }
             });
 
             // Check if layer is defined before adding to map
@@ -354,19 +228,6 @@ async function loadAllMarkers(map) {
             console.error(`Error loading marker data or icon for type ${typeKey}:`, error);
         }
     }
-
-    // Add connection layers to the map
-    Object.keys(CONNECTION_TYPES).forEach(typeKey => {
-        const layer = CONNECTION_TYPES[typeKey].layer;
-        if (layer) {
-            layer.addTo(map);
-            $(`#toggle-${typeKey.toLowerCase()}`).on('click', function () {
-                toggleLayer(map, layer, this);
-            });
-        } else {
-            console.error(`Layer for connection type ${typeKey} is not initialized.`);
-        }
-    });
 }
 
 

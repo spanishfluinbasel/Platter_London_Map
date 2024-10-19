@@ -1,34 +1,16 @@
 Map Explorer
 ============
-Map Explorer is a web-based interactive map that visualizes various markers and their connections. It uses Leaflet.js for the map, custom tile layers, and dynamically generated content for each marker. The project integrates Google Sheets for data ingestion, Puppeteer for screenshot generation, and JavaScript for dynamic interactivity.
+Map Explorer is a web-based interactive map that visualizes various markers. 
+It uses Leaflet.js for the map, custom tile layers, and dynamically generated content for each marker.
+The project integrates Google Sheets for data ingestion and JavaScript for dynamic interactivity.
 
 
 # Features
 
 - Interactive map with custom tiles and markers
 - Dynamic sidebar with detailed information on selected markers
-- Connections between markers visualized as colored lines
-- Hover and click interactivity for both map markers and sidebar items
-- Animated page preview with scrolling effect in the sidebar
 - Supports both desktop and mobile views with responsive layouts
 - Google Sheets integration for data ingestion
-- Puppeteer-based screenshot generation for map entries
-- Scrollable bottom banner with clickable icons to toggle marker layers
-
-# Technologies Used
-
-- Frontend:
-  - HTML, CSS, JavaScript (ES6)
-  - Leaflet.js
-  - jQuery for DOM manipulation
-  - Puppeteer for generating screenshots
-  - Google Sheets API for dynamic data ingestion
-
-- Backend:
-  - Python script to load the data
-  - Node.js (for Puppeteer and screenshots)
-  - Google Sheets for managing the data
-  - JSON for storing marker data and connections
 
 
 # Project Structure
@@ -38,7 +20,6 @@ root/
 │   ├── css/
 │   │   └── map.css            # Main CSS styles
 │   ├── images/
-│   │   ├── screenshots/       # Screenshots for markers
 │   │   └── icons/             # Marker and connection icons
 │   ├── js/
 │   │   └── markedMap.js       # Core JavaScript for the map and interactions
@@ -92,7 +73,6 @@ python app.py
 3. Open the index.html file
 4. Click on any marker to view detailed information in the sidebar.
 5. Toggle marker layers using the icons in the scrollable bottom banner.
-6. Click on map connections to view their associated markers.
 
 # Data Structure
 - Each entry in Google Sheets has an id, x, y, label, and a name.

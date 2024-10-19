@@ -96,110 +96,8 @@ html, body {
     background-color: #2d373c; /* Darker color when hovered */
 }
 
-/* Styles for the preview box */
-.preview-box {
-    width: 100%;
-    max-width: 400px; /* Adjust as needed */
-    min-height: 200px; /* Fixed height for the scrolling effect */
-    height: 200px; /* Fixed height for the scrolling effect */
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    margin-top: auto; /* Pushes to the bottom of the container */
-    margin-bottom: 90px;
-    cursor: pointer; /* Make it look clickable */
-}
-
-/* Styles for the overlay */
-.preview-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.3s; /* Smooth fade-in */
-}
-
-.preview-box:hover .preview-overlay {
-    opacity: 1; /* Show overlay on hover */
-}
-
-.preview-overlay span {
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-/* Content that will be animated */
-.preview-content {
-    width: 100%;
-    height: 100%; /* Ensure it takes the full height of its container */
-    background-size: contain; /* Scale down the image to fit the width of the container */
-    background-repeat: no-repeat;
-    background-position: top center; /* Center the image horizontally */
-    animation: scroll-animation 20s linear infinite; /* Scroll up and down */
-    animation-delay: 2s;
-}
-
-/* Animation to simulate scrolling */
-@keyframes scroll-animation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-25%); /* Only scroll to the middle of the image */
-    }
-    100% {
-        transform: translateY(0); /* Scroll back to the top */
-    }
-}
-
-/* Connection list styles */
-.connections-list {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0;
-    margin: 0;
-}
-
-.connection-item {
-    margin-bottom: 20px; /* Space between each connection item */
-}
-
-.connection-text {
-    display: block; /* Make sure the text spans the full width */
-    color: #2d373c; /* Adjust text color */
-    font-size: 0.7rem; /* Adjust font size */
-    margin-bottom: 5px; /* Space between text and icons */
-    text-align: center;
-}
-
-.connection-icons {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.connection-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px;
-    margin: 0 5px; /* Space between icon and line */
-}
-
-.connection-line {
-    flex-grow: 1; /* Allows the line to take up the remaining space */
-    height: 2px; /* Thickness of the line */
-    background-color: black; /* Default line color, overridden by inline styles */
-}
-
 .bottom-banner {
-    width: 100%;
+    width: 70%;
     height: 80px;
     background: #2d373c;
     color: white;
@@ -223,11 +121,6 @@ html, body {
 
 #left-icons {
     justify-content: flex-start;
-}
-
-#right-icons {
-    justify-content: flex-end;
-    margin-left: auto; /* Ensures this group aligns to the far right */
 }
 
 .banner-description {
@@ -272,42 +165,6 @@ html, body {
     z-index: 1001;
 }
 
-.people-sidebar {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px; /* Space between image and text */
-}
-
-.people-image img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-}
-
-.people-info {
-    flex: 1; /* Take up remaining space */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.people-info h3 {
-    margin: 0 0 5px 0; /* Name at the top */
-    color: #2d373c; /* Same color as other headings for consistency */
-}
-
-.people-info p {
-    margin: 5px 0;
-    font-size: 0.9rem; /* Adjust font size */
-    color: #2d373c;
-}
-
-.people-info p i {
-    color: #555; /* Italic text in a slightly different color for distinction */
-}
-
 .select-marker {
     cursor: pointer;
 }
@@ -329,24 +186,32 @@ html, body {
     text-decoration: none; /* Remove underline */
 }
 
-.popup-content {
-    display: flex;
-    align-items: center; /* Vertically aligns icon and text */
+/* Style for the tab container */
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
 }
 
-.popup-icon {
-    margin-right: 10px; /* Space between the icon and the text */
+/* Style for tab buttons */
+.tab button {
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-.popup-icon img {
-    width: 25px; /* Set the width of the icon */
-    height: 25px; /* Set the height of the icon */
-    object-fit: contain; /* Keep the aspect ratio of the image */
+/* Style for the active/current tab button */
+.tab button.active {
+  background-color: #ccc;
 }
 
-.popup-text {
-    font-size: 1rem; /* Adjust text size as needed */
-    color: #2d373c; /* Set text color */
+/* Style for the tab content */
+.tabcontent {
+  display: none;
+  padding: 16px;
+  border-top: none;
 }
 
 
@@ -364,12 +229,6 @@ html, body {
         float: none;
         position: relative;
         overflow-y: auto; /* Allow scrolling if content overflows */
-    }
-
-    /* Optional: Adjust the height of the preview box to fit better on mobile */
-    .preview-box {
-        max-width: 100%; /* Ensure it takes up the full width of the container */
-        height: 150px; /* Reduced height for smaller screens */
     }
 
     #infoPanel h2 {
