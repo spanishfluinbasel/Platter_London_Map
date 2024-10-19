@@ -1,5 +1,18 @@
 {
-  "dependencies": {
-    "puppeteer": "^23.2.1"
-  }
+  "name": "platter_london_map",
+  "version": "1.0.0",
+  "description": "A historical interactive map of London showing Th. Platter's visits",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorinmarti/Platter_London_Map.git"
+  },
+  "author": "Stefanie Heeg, Sorin Marti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sorinmarti/Platter_London_Map/issues"
+  },
+  "homepage": "https://github.com/sorinmarti/Platter_London_Map#readme"
 }
