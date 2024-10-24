@@ -125,9 +125,9 @@ function updateSidebarContent(data, type) {
                 </div>
                 <!-- Tab buttons -->
                 <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'src_image')">Sorce Image</button>
                     <button class="tablinks" onclick="openTab(event, 'txt_orig')">Original Text</button>
                     <button class="tablinks" onclick="openTab(event, 'txt_en')">English</button>
+                    <button class="tablinks" onclick="openTab(event, 'src_image')">Source Image</button>
                 </div>
                 
                   <!-- Tab content -->
