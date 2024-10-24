@@ -181,6 +181,7 @@ function createMarker(markerGroup, type, markerData, icon) {
 
     // Create the marker with the SVG icon
     const marker = L.marker(coordinates, { icon: icon });
+    marker.bindTooltip(label, {permanent:false, direction:"top"})
     marker.addTo(markerGroup);
 
     // Store the marker in the global object using its ID
