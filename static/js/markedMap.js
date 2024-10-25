@@ -126,8 +126,8 @@ function updateSidebarContent(data, type) {
                 <!-- Tab buttons -->
                 <div class="tab">
                     <button class="tablinks" onclick="openTab(event, 'txt_orig')">Original Text</button>
-                    <button class="tablinks" onclick="openTab(event, 'txt_en')">English</button>
-                    <button class="tablinks" onclick="openTab(event, 'src_image')">Source Image</button>
+                    <button class="tablinks" onclick="openTab(event, 'txt_en')">English Translation</button>
+                    <button class="tablinks" onclick="openTab(event, 'src_image')">Source</button>
                 </div>
                 
                   <!-- Tab content -->

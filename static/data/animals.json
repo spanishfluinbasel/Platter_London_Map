@@ -1,7 +1,7 @@
 [
     {
         "id": "a1",
-        "label": "Tower Zoo",
+        "label": "Animals at the Tower of London",
         "name": "Animals at the Tower of London",
         "x": 68.1,
         "y": -1.46,
@@ -23,19 +23,19 @@
     },
     {
         "id": "a3",
-        "label": "Cockpit in Shoe lane",
+        "label": "Cock-fighting at the Cockpit in Shoe Lane",
         "name": "Cock-fighting at the Cockpit in Shoe Lane",
         "x": 73.83,
         "y": -87.41,
         "text": "Warning: descriptions of animal cruelty.",
-        "src_text_orig": "Es ist auch in der statt Londen nicht weit vom ro\u00dfm\u00e4rckt, der ein gro\u00dfer platz ist, ein hau\u00df, in welchem man y\u00e4hrlich drey viertheil jahr (dann im u\u0308brigen, sagten sie, wehrden die federen voll blut, da\u00df man es\nnicht k\u00f6nne thun) den hanen streit haltet, wie ich dann den platz gesehen hab, der wie ein (theatrum) schauwplatz erbauwen. Mitten im selbigen irn boden ist ein runder tisch mitt strauw u\u0308berleget unndt hohen listen\nurnbgeben, auf welchem man die hanen an einanderen hetzet unndt reitzet unndt sitzen die, so mitt einander wetten, welcher han den anderen erlegen werde, zu aller nechst umb die runde scheiben herumb; die zuseher\naber, so umb ihren pfenning da sindt, sitzen oben herumb, sehen auch mitt sonderem lust zu, wie eyferig unndt zornmu\u0308tig die zwen hanen mitt ein ander kempfen, mitt den sporen undt schn\u00e4blen ein ander bi\u00df auf den todt verletzen. Unndt welcher han sich ergibt oder gleich stirbt, de\u00dfen parthey verleu\u0308ret da\u00df gewett; sie wetten oftermahlen, wie ich berichtet worden bin, auf ettlich tausent kronen umb einen hanen, sonderlich wann sie die hanen selber lassen auferziehen unndt sie mit ihnen bringen, unndt vvehret solches spil gemeinlich 4 oder 5 stundt. Dann sonst hatt der meister, der im hau\u00df wohnet, viel hanen, die er in besonderen kefinen speyset unndt erhaltet zu solchem spil, da er uns angezeigt, er habe ettliche hanen, da er keinen under 20 kronen wolte hin geben; sindt sch\u00f6n gro\u00df, doch nur der gattung, wie bey uns auch sindt. Er saget uns auch, so man k\u00f6nne gespu\u0308ren, da\u00df der hanen schn\u00e4bel mitt knoblauch angestrichen seye, habe man fug unndt macht, sie gleich zu t\u00f6den. Sonst saget er auch, es seye nichts, da\u00df man ihnen branten wein einschu\u0308tte, ehe sie anheben zu kempfen; saget uns, wunder wa\u00df kurtzweil darbey seye, wann man zusehe.",
-        "src_text_translation": "There is also in the city of London not far from the horse-market which occupies a large site, a house where cock-fights are held annually throughout three quarters of the year (for in the remaining quarter they told me it was impossible since the feathers are full of blood) and I saw the place which is built like a theatre (theatrum). In the centre on the floor stands a circular table covered with straw and with ledges round it, where the cocks are teased and incited to fly at one another, while those with wagers as to which cock will win, sit closest around the circular disk, but the spectators who are merely present on their entrance penny sit around higher up, watching with eager pleasure the fierce and angry fight between the cocks, as these wound each other to death with spurs and beaks. And the party whose cock surrenders or dies loses the wager; I am told that stakes on a cock often amount to many thousands of crowns, especially if they have reared the cock themselves and brought their own along. For the master who inhabits the house has many cocks besides, which he feeds in separate cages and keeps for this sport, as he showed us. He also had several cocks, none of which he would sell for less than twenty crowns; they are very large but just the same kind as we have in our country. He also told us that if one discovered that the cocks\u2019 beaks had been coated with garlic, one was fully entitled to kill them at once. He added too, that it was nothing to give them brandy before they began to fight, adding what wonderful pleasure there was in watching them.",
+        "src_text_orig": "Es ist auch in der statt Londen nicht weit vom ro\u00dfm\u00e4rckt, der ein gro\u00dfer platz ist, ein hau\u00df, in welchem man y\u00e4hrlich drey viertheil jahr (dann im u\u0308brigen, sagten sie, wehrden die federen voll blut, da\u00df man es nicht k\u00f6nne thun) den hanen streit haltet, wie ich dann den platz gesehen hab, der wie ein (theatrum) schauwplatz erbauwen. Mitten im selbigen irn boden ist ein runder tisch mitt strauw u\u0308berleget unndt hohen listen\numbgeben, auf welchem man die hanen an einanderen hetzet unndt reitzet unndt sitzen die, so mitt einander wetten, welcher han den anderen erlegen werde, zu aller nechst umb die runde scheiben herumb; die zuseher aber, so umb ihren pfenning da sindt, sitzen oben herumb, sehen auch mitt sonderem lust zu, wie eyferig unndt zornmu\u0308tig die zwen hanen mitt ein ander kempfen, mitt den sporen undt schn\u00e4blen ein ander bi\u00df auf den todt verletzen. Unndt welcher han sich ergibt oder gleich stirbt, de\u00dfen parthey verleu\u0308ret da\u00df gewett; sie wetten oftermahlen, wie ich berichtet worden bin, auf ettlich tausent kronen umb einen hanen, sonderlich wann sie die hanen selber lassen auferziehen unndt sie mit ihnen bringen [unndt vvehret solches spil gemeinlich 4 oder 5 stundt.] Dann sonst hatt der meister, der im hau\u00df wohnet, viel hanen, die er in besonderen kefinen speyset unndt erhaltet zu solchem spil, da er uns angezeigt, er habe ettliche hanen, da er keinen under 20 kronen wolte hin geben; sindt sch\u00f6n gro\u00df, doch nur der gattung, wie bey uns auch sindt. Er saget uns auch, so man k\u00f6nne gespu\u0308ren, da\u00df der hanen schn\u00e4bel mitt knoblauch angestrichen seye, habe man fug unndt macht, sie gleich zu t\u00f6den. Sonst saget er auch, es seye nichts, da\u00df man ihnen branten wein einschu\u0308tte, ehe sie anheben zu kempfen; saget uns, wunder wa\u00df kurtzweil darbey seye, wann man zusehe.",
+        "src_text_translation": "There is also in the city of London not far from the horse-market which occupies a large site, a house where cock-fights are held annually throughout three quarters of the year (for in the remaining quarter they told me it was impossible since the feathers are full of blood) and I saw the place which is built like a theatre (theatrum). In the centre on the floor stands a circular table covered with straw and with ledges round it, where the cocks are teased and incited to fly at one another, while those with wagers as to which cock will win, sit closest around the circular disk, but the spectators who are merely present on their entrance penny sit around higher up, watching with eager pleasure the fierce and angry fight between the cocks, as these wound each other to death with spurs and beaks. And the party whose cock surrenders or dies loses the wager; I am told that stakes on a cock often amount to many thousands of crowns, especially if they have reared the cock themselves and brought their own along [This entertainment usually lasts four or five hours.] For the master who inhabits the house has many cocks besides, which he feeds in separate cages and keeps for this sport, as he showed us. He also had several cocks, none of which he would sell for less than twenty crowns; they are very large but just the same kind as we have in our country. He also told us that if one discovered that the cocks\u2019 beaks had been coated with garlic, one was fully entitled to kill them at once. He added too, that it was nothing to give them brandy before they began to fight, adding what wonderful pleasure there was in watching them.",
         "page_img": 929207
     },
     {
         "id": "a4",
-        "label": "stables",
-        "name": "Animal-baiting stables",
+        "label": "Animal-baiting Stables",
+        "name": "Animal-baiting Stables",
         "x": 55.27,
         "y": -52.72,
         "text": "Estimated Place",
@@ -45,8 +45,8 @@
     },
     {
         "id": "a5",
-        "label": "camel on london bridge",
-        "name": "camel on london bridge",
+        "label": "Camel on London Bridge",
+        "name": "Camel on London Bridge",
         "x": 58.17,
         "y": -31.26,
         "text": "",
@@ -56,8 +56,8 @@
     },
     {
         "id": "a6",
-        "label": "Of English animals in general",
-        "name": "Of English animals in general",
+        "label": "Of English Animals in General",
+        "name": "Of English Animals in General",
         "x": 79.78,
         "y": -108.11,
         "text": "Undefined place",
