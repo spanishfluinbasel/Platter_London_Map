@@ -127,7 +127,7 @@ function updateSidebarContent(data, type) {
                 <div class="tab">
                     <button class="tablinks" onclick="openTab(event, 'txt_orig')">Transcription</button>
                     <button class="tablinks" onclick="openTab(event, 'txt_en')">English Translation</button>
-                    <button class="tablinks" onclick="openTab(event, 'src_image')">Original Source</button>
+                    <button class="tablinks" onclick="openTab(event, 'src_image')">Source</button>
                 </div>
                 
                   <!-- Tab content -->
