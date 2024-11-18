@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deea2ef-3ef8-45f8-81f5-87bc092d8de5" name="Changes" comment="clean up 2" />
+    <list default="true" id="3deea2ef-3ef8-45f8-81f5-87bc092d8de5" name="Changes" comment="adding tiles 2/80ish" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +20,11 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Stups\PycharmProjects\Platter_London_Map\static\images" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="clean up 2">
       <option name="closed" value="true" />
@@ -29,12 +34,38 @@
       <option name="project" value="LOCAL" />
       <updated>1731953915345</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="clean up 2">
+      <option name="closed" value="true" />
+      <created>1731954526158</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731954526158</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adding tiles 1/80ish">
+      <option name="closed" value="true" />
+      <created>1731954882269</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731954882269</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adding tiles 2/80ish">
+      <option name="closed" value="true" />
+      <created>1731954940255</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731954940255</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clean up 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up 2" />
+    <MESSAGE value="adding tiles 1/80ish" />
+    <MESSAGE value="adding tiles 2/80ish" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding tiles 2/80ish" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
