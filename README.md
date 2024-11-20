@@ -65,10 +65,10 @@ python app.py
 ```
 
 ## Regenerate Tiles
-``gdal2tiles -p raster -z 0-5 -w none map.jpg tiles``
+``gdal2tiles -p raster -z 0-6 --xyz -w none static/images/PlatterMap.tif static/tiles``
 
 # Usage
-1. Serve the tiles (for example:  http://localhost:8000)
+1. Serve the tiles
 2. Ingest the data with the ``data_ingest.py`` script
 3. Open the index.html file
 4. Click on any marker to view detailed information in the sidebar.
